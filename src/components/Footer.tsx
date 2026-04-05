@@ -32,7 +32,7 @@ export default function Footer() {
           <div>
             <h4 className="font-bold mb-6 text-lg">Entreprise</h4>
             <ul className="flex flex-col gap-4 text-gray-400 text-sm">
-              <li><Link href="#" className="hover:text-quido transition-colors">À propos</Link></li>
+              <li><Link href="/contact" className="hover:text-quido transition-colors">Nous contacter</Link></li>
               <li><Link href="/blog" className="hover:text-quido transition-colors">Conseils</Link></li>
               <li><Link href="#faq" className="hover:text-quido transition-colors">FAQ</Link></li>
               <li><Link href="#" className="hover:text-quido transition-colors">Mentions Légales</Link></li>
