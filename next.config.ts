@@ -25,6 +25,18 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  async rewrites() {
+    return [
+      {
+        source: '/menage',
+        destination: 'https://quido-menage.vercel.app/menage',
+      },
+      {
+        source: '/menage/:path*',
+        destination: 'https://quido-menage.vercel.app/menage/:path*',
+      },
+    ];
+  },
 };
 
 export default nextConfig;
