@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function ProofAndBooking() {
   return (
-    <section id="estimer" className="py-32 bg-white relative overflow-hidden">
+    <section id="estimer" className="py-32 bg-offwhite relative overflow-hidden">
       {/* Formes organiques en fond (DA Quido) */}
       <div 
         className="absolute -right-20 top-10 w-[600px] h-[600px] bg-quido/10 -z-10"
