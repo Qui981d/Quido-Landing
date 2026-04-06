@@ -51,13 +51,13 @@ export default function CityLandingPage({
                   {heroSubtitle}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-5 items-center">
-                  <Link href="/estimation" className="group relative inline-flex items-center justify-center gap-4 bg-black text-white px-10 py-5 text-lg font-bold overflow-hidden w-full sm:w-auto border border-black rounded-full hover:shadow-[0_0_40px_rgba(0,0,0,0.2)] transition-shadow">
+                  <Link href="/rendez-vous" className="group relative inline-flex items-center justify-center gap-4 bg-black text-white px-10 py-5 text-lg font-bold overflow-hidden w-full sm:w-auto border border-black rounded-full hover:shadow-[0_0_40px_rgba(0,0,0,0.2)] transition-shadow">
                     <div className="absolute inset-0 w-full h-full bg-quido scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out z-0"></div>
-                    <span className="relative z-10">Estimer mon bien</span>
+                    <span className="relative z-10">Prendre RDV</span>
                     <ArrowRight className="w-5 h-5 relative z-10 group-hover:translate-x-2 transition-all duration-500" />
                   </Link>
-                  <Link href="/rendez-vous" className="text-lg text-gray-500 hover:text-black border-b border-transparent hover:border-black pb-1 transition-all">
-                    Prendre rendez-vous
+                  <Link href="/estimation" className="text-lg text-gray-500 hover:text-black border-b border-transparent hover:border-black pb-1 transition-all">
+                    Estimer mon bien
                   </Link>
                 </div>
               </div>
