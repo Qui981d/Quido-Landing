@@ -109,13 +109,14 @@ export default function CityLandingPage({
               <div className="w-full lg:w-1/3 lg:sticky lg:top-40 self-start">
                 <span className="text-xs font-bold uppercase tracking-[0.3em] text-quido mb-6 block">Le marché local</span>
                 <h2 className="text-5xl lg:text-6xl font-display font-medium tracking-tight leading-[0.95] mb-8">
-                  Pourquoi <br/><span className="font-bold relative inline-block mt-2">
-                    <span className="relative z-10">{city}</span>
-                    <svg className="absolute w-[110%] h-[0.3em] -bottom-[0.05em] -left-[5%] z-0 text-quido/40" viewBox="0 0 200 20" preserveAspectRatio="none">
+                  Pourquoi <br/>
+                  <span className="text-gray-900 font-bold">{city}</span>
+                  <br/> est <span className="font-bold relative inline-block mt-2">
+                    <span className="relative z-10">idéal.</span>
+                    <svg className="absolute w-[110%] h-[0.3em] -bottom-[0.1em] -left-[5%] z-0 text-quido" viewBox="0 0 200 20" preserveAspectRatio="none">
                       <path d="M5,15 C45,5 150,15 195,8" fill="none" stroke="currentColor" strokeWidth="12" strokeLinecap="round" />
                     </svg>
                   </span>
-                  <br/> est idéal.
                 </h2>
                 <p className="text-xl text-gray-500 font-light leading-relaxed mb-8 border-l border-quido pl-6">
                   Un potentiel locatif unique dicté par son positionnement stratégique, son économie transfrontalière et son cadre de vie exceptionnel.
@@ -134,18 +135,15 @@ export default function CityLandingPage({
                     transition={{ delay: i * 0.1, duration: 0.7 }}
                     className="group border-b border-black/10 py-12 md:py-20 hover:border-black transition-colors duration-500 flex flex-col md:flex-row gap-6 md:gap-16 cursor-default"
                   >
-                    {/* Index & Icone */}
-                    <div className="flex items-center md:items-start md:flex-col gap-6 md:w-1/4 shrink-0">
+                    {/* Index */}
+                    <div className="flex md:items-start md:flex-col gap-6 md:w-1/4 shrink-0">
                        <span className="text-5xl md:text-7xl text-gray-200 font-display font-bold tracking-tighter group-hover:text-quido transition-colors duration-500">
                          0{i + 1}
-                       </span>
-                       <span className="text-3xl md:text-4xl text-black md:mt-2 group-hover:scale-125 origin-left transition-transform duration-500">
-                         {item.icon}
                        </span>
                     </div>
 
                     {/* Contenu */}
-                    <div className="md:w-3/4 flex flex-col justify-center">
+                    <div className="md:w-3/4 flex flex-col justify-center mt-2 md:mt-0">
                       <h3 className="text-3xl lg:text-4xl font-display font-bold text-black mb-6 leading-tight group-hover:translate-x-2 transition-transform duration-500">{item.title}</h3>
                       <p className="text-xl text-gray-500 font-body leading-relaxed">
                         {item.text}
