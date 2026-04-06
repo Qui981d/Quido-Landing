@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function ProcessTimeline() {
   const steps = [
@@ -70,7 +71,7 @@ export default function ProcessTimeline() {
             >
               <div className="relative h-56 lg:h-64 w-full overflow-hidden shrink-0 border-b border-black/10 group-hover:border-white/10 transition-colors z-10">
                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-700 z-10" />
-                 <img src={step.img} alt={step.title} className="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700" />
+                 <Image fill sizes="(max-width: 768px) 100vw, 25vw" src={step.img} alt={step.title} className="object-cover grayscale-[30%] group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700" />
                  <div className="absolute top-4 left-4 z-20">
                     <span className="text-xs font-bold tracking-[0.2em] text-white bg-black/60 backdrop-blur-md uppercase px-4 py-2 rounded-full group-hover:bg-[#fae150] group-hover:text-black transition-colors duration-500">
                       {step.day}

@@ -12,6 +12,20 @@ export const metadata: Metadata = {
   },
 };
 
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://quido.fr" },
+    { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://quido.fr/contact" }
+  ]
+};
+
 export default function ContactPage() {
-  return <ContactForm />;
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd).replace(/</g, '\\u003c') }} />
+      <ContactForm />
+    </>
+  );
 }

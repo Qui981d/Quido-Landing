@@ -21,10 +21,19 @@ const jsonLd = {
   "description": "Service de conciergerie locative à Prévessin-Moëns, commune résidentielle prisée du Pays de Gex.",
 };
 
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://quido.fr" },
+    { "@type": "ListItem", "position": 2, "name": "Prévessin-Moëns", "item": "https://quido.fr/conciergerie-prevessin-moens" }
+  ]
+};
+
 export default function PrevessinPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c') }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([jsonLd, breadcrumbJsonLd]).replace(/</g, '\\u003c') }} />
       <CityLandingPage
         city="Prévessin-Moëns"
         heroTitle="Conciergerie Airbnb à Prévessin-Moëns."

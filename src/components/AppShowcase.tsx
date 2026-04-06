@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const features = [
   { label: "Statistiques financières en temps réel" },
@@ -95,11 +96,14 @@ export default function AppShowcase() {
                     <span className="text-[10px] text-gray-400 font-mono">app.quido.fr/dashboard</span>
                   </div>
                 </div>
-                <img
-                  src="/images/app-dashboard.png"
-                  alt="Tableau de bord Quido — Statistiques et performances"
-                  className="w-full h-auto rounded-b-lg block"
-                />
+                <div className="relative w-full aspect-[16/10]">
+                  <Image
+                    src="/images/app-dashboard.png"
+                    alt="Tableau de bord Quido — Statistiques et performances"
+                    fill
+                    className="rounded-b-lg object-cover"
+                  />
+                </div>
               </div>
               {/* Laptop stand */}
               <div className="mx-auto w-[60%] h-3 bg-gray-300 rounded-b-lg" />
@@ -112,11 +116,14 @@ export default function AppShowcase() {
                 <div className="bg-black rounded-[20px] pt-4 pb-2 px-0.5">
                   {/* Notch */}
                   <div className="mx-auto w-20 h-4 bg-black rounded-b-xl relative -top-2 z-10" />
-                  <img
-                    src="/images/app-calendar.png"
-                    alt="Calendrier Quido — Vue mobile"
-                    className="w-full h-auto rounded-[16px] -mt-2"
-                  />
+                  <div className="relative w-full aspect-[9/19]">
+                    <Image
+                      src="/images/app-calendar.png"
+                      alt="Calendrier Quido — Vue mobile"
+                      fill
+                      className="rounded-[16px] object-cover"
+                    />
+                  </div>
                 </div>
               </div>
             </div>

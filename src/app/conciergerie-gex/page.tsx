@@ -21,10 +21,19 @@ const jsonLd = {
   "description": "Service de conciergerie locative premium à Gex, chef-lieu du Pays de Gex.",
 };
 
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://quido.fr" },
+    { "@type": "ListItem", "position": 2, "name": "Gex", "item": "https://quido.fr/conciergerie-gex" }
+  ]
+};
+
 export default function GexPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c') }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([jsonLd, breadcrumbJsonLd]).replace(/</g, '\\u003c') }} />
       <CityLandingPage
         city="Gex"
         heroTitle="Conciergerie Airbnb à Gex."

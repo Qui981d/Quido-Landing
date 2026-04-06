@@ -21,10 +21,19 @@ const jsonLd = {
   "description": "Service de conciergerie locative premium à Saint-Genis-Pouilly, aux portes du CERN.",
 };
 
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://quido.fr" },
+    { "@type": "ListItem", "position": 2, "name": "Saint-Genis-Pouilly", "item": "https://quido.fr/conciergerie-saint-genis-pouilly" }
+  ]
+};
+
 export default function SaintGenisPPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c') }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([jsonLd, breadcrumbJsonLd]).replace(/</g, '\\u003c') }} />
       <CityLandingPage
         city="Saint-Genis-Pouilly"
         heroTitle="Conciergerie Airbnb à Saint-Genis-Pouilly."

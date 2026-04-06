@@ -100,12 +100,17 @@ export default function ContactForm() {
            </div>
         </div>
 
-        <div
-          className="relative z-10 mt-auto ml-auto shadow-2xl overflow-hidden filter grayscale-[10%] sepia-[5%] shrink-0 h-[15vh] md:h-[20vh] aspect-[1.5] translate-x-4 md:translate-x-8 lg:translate-x-12 translate-y-4 md:translate-y-8 hidden md:block"
-          style={{ borderRadius: '45% 55% 55% 45% / 55% 45% 55% 45%' }}
-        >
-          <img src="/images/hero-bedroom.png" alt="Pays de Gex" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-black/5" />
+        <div className="relative z-10 mt-12 w-full h-48 md:h-64 rounded-2xl overflow-hidden shadow-lg border border-gray-200 shrink-0">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2760.370868153444!2d6.0792823!3d46.2427672!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478c6347395e54d5%3A0x6b8bc228c89bdf!2s181%20Rue%20du%20Parc%20Jean%20Monnet%2C%2001630%20Saint-Genis-Pouilly!5e0!3m2!1sfr!2sfr!4v1712400000000!5m2!1sfr!2sfr"
+            width="100%" 
+            height="100%" 
+            style={{ border: 0 }} 
+            allowFullScreen={false} 
+            loading="lazy" 
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Carte Google Maps Quido Conciergerie à Saint-Genis-Pouilly"
+          />
         </div>
       </div>
 

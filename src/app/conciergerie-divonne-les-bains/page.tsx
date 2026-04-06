@@ -21,10 +21,19 @@ const jsonLd = {
   "description": "Service de conciergerie locative haut de gamme à Divonne-les-Bains.",
 };
 
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://quido.fr" },
+    { "@type": "ListItem", "position": 2, "name": "Divonne-les-Bains", "item": "https://quido.fr/conciergerie-divonne-les-bains" }
+  ]
+};
+
 export default function DivonnePage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c') }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([jsonLd, breadcrumbJsonLd]).replace(/</g, '\\u003c') }} />
       <CityLandingPage
         city="Divonne-les-Bains"
         heroTitle="Conciergerie Airbnb à Divonne-les-Bains."

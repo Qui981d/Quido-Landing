@@ -3,6 +3,8 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
+
 export default function LocalExpertise() {
   return (
     <section id="expertise" className="py-24 bg-white relative">
@@ -90,10 +92,12 @@ export default function LocalExpertise() {
               className="col-span-1 md:col-span-2 relative min-h-[350px] lg:min-h-[400px] overflow-hidden group"
             >
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10 transition-colors duration-500 group-hover:via-black/50" />
-              <img 
+              <Image 
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 src="/images/local-view.png" 
                 alt="Vue panoramique du Pays de Gex entre le Jura et Genève — zone d'intervention Quido Conciergerie" 
-                className="absolute inset-0 w-full h-full object-cover scale-100 group-hover:scale-105 transition-transform duration-1000 origin-center"
+                className="object-cover scale-100 group-hover:scale-105 transition-transform duration-1000 origin-center"
               />
               
               <div className="absolute inset-0 p-10 lg:p-12 flex flex-col justify-between z-20">

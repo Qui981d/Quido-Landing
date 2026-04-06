@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Mail, Phone, MapPin } from "lucide-react";
+import Image from "next/image";
 
 export default function Footer() {
   const cities = [
@@ -13,7 +14,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           <div className="col-span-1 md:col-span-1">
             <Link href="/" className="inline-flex items-center mb-6">
-              <img src="/Logos/rvb_horizontal.png" alt="Quido Conciergerie Locative Pays de Gex" className="h-10 md:h-14 w-auto" />
+              <Image src="/Logos/rvb_horizontal.png" alt="Quido Conciergerie Locative Pays de Gex" width={140} height={40} className="h-10 md:h-14 w-auto object-contain" />
             </Link>
             <p className="text-gray-400 text-sm leading-relaxed mb-6">
               Conciergerie locative premium au Pays de Gex. Gestion Airbnb complète : ménage hôtelier, communication voyageurs, optimisation tarifaire. Maximisez vos revenus locatifs en toute sérénité.
@@ -72,8 +73,12 @@ export default function Footer() {
           </div>
         </div>
         
-        <div className="pt-8 border-t border-white/10 text-center text-sm text-gray-500">
-          <p>© {new Date().getFullYear()} Quido Conciergerie. Tous droits réservés.</p>
+        <div className="pt-8 border-t border-white/10 mb-8 flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <p className="text-sm text-gray-500">© {new Date().getFullYear()} Quido Conciergerie. Tous droits réservés.</p>
+          <div className="flex gap-6 text-sm text-gray-500">
+            <Link href="/mentions-legales" className="hover:text-quido transition-colors">Mentions Légales</Link>
+            <Link href="/confidentialite" className="hover:text-quido transition-colors">Politique de Confidentialité</Link>
+          </div>
         </div>
       </div>
     </footer>

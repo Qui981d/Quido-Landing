@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 interface BlogCardProps {
   slug: string;
@@ -15,10 +16,12 @@ export default function BlogCard({ slug, title, description, category, date, rea
     <Link href={`/blog/${slug}`} className="group block">
       <article className="bg-white border border-gray-200 rounded-2xl overflow-hidden card-lift h-full flex flex-col">
         <div className="relative h-52 overflow-hidden">
-          <img
+          <Image
+            fill
+            sizes="(max-width: 768px) 100vw, 33vw"
             src={coverImage}
             alt={title}
-            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+            className="object-cover group-hover:scale-105 transition-transform duration-700"
           />
           <div className="absolute top-4 left-4">
             <span className="bg-white/90 backdrop-blur-sm text-xs font-bold uppercase tracking-widest text-quido px-3 py-1.5 rounded-full">

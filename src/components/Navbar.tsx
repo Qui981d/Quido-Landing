@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
@@ -29,7 +30,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           <Link href="/" className="flex items-center shrink-0">
-            <img src="/Logos/rvb_horizontal.png" alt="Quido Conciergerie" className="h-10 md:h-14 w-auto" />
+            <Image src="/Logos/rvb_horizontal.png" alt="Quido Conciergerie" width={140} height={40} className="h-10 md:h-14 w-auto object-contain" />
           </Link>
 
           {/* Desktop Nav — Centered */}
