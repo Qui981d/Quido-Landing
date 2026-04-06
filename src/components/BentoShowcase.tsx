@@ -14,7 +14,7 @@ export default function BentoShowcase() {
     },
     { 
       title: "Ménage soigné", 
-      desc: "Un ménage complet et rigoureux réalisé par notre équipe professionnelle entre chaque séjour."
+      desc: "Un ménage complet et rigoureux réalisé par nos équipes partenaires de confiance entre chaque séjour."
     },
     { 
       title: "Linge de qualité", 

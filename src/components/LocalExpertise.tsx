@@ -67,7 +67,7 @@ export default function LocalExpertise() {
                 <h3 className="text-2xl font-bold mb-4">Équipes de Confiance</h3>
               </div>
               <p className="text-gray-500 group-hover:text-gray-300 font-body leading-relaxed">
-                Pas de sous-traitance à la chaîne. Nous travaillons avec nos propres équipes de nettoyage formées à l'hôtellerie depuis des années. Le standard est immuable.
+                Nous travaillons exclusivement avec des équipes de nettoyage partenaires de confiance avec qui nous collaborons depuis des années. Le standard est immuable.
               </p>
             </motion.div>
 

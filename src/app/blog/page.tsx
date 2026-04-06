@@ -98,15 +98,34 @@ export default function BlogPage() {
           </div>
         </section>
 
-        {/* CTA */}
-        <section className="max-w-4xl mx-auto px-4 sm:px-6 mt-24">
-          <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-black via-gray-900 to-black p-10 md:p-16 text-white text-center">
-            <div className="absolute -top-20 -right-20 w-[400px] h-[400px] bg-quido/20 -z-0" style={{ borderRadius: '60% 40% 50% 50% / 40% 50% 50% 60%' }} />
-            <div className="relative z-10">
-              <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight">Prêt à passer à l&apos;action ?</h2>
-              <p className="text-gray-400 text-lg mb-8 max-w-lg mx-auto">Découvrez gratuitement le potentiel locatif de votre bien au Pays de Gex.</p>
-              <Link href="/estimation" className="group inline-flex items-center gap-3 bg-quido text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white hover:text-black transition-all duration-300">
-                Estimer mon bien <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+        {/* Editorial CTA */}
+        <section className="max-w-5xl mx-auto px-4 sm:px-6 mt-32">
+          <div className="relative border border-black bg-quido text-black p-10 md:p-20 flex flex-col md:flex-row items-center justify-between gap-10 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] transition-shadow duration-500">
+            {/* Décoration Géométrique */}
+            <div className="absolute top-0 right-0 w-32 h-32 border-l border-b border-black/10 pointer-events-none hidden md:block">
+              <svg className="absolute top-4 right-4 w-6 h-6 text-black/20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0l1.5 10.5L24 12l-10.5 1.5L12 24l-1.5-10.5L0 12l10.5-1.5L12 0z"/></svg>
+            </div>
+
+            <div className="max-w-xl">
+              <span className="text-xs font-bold uppercase tracking-[0.3em] block mb-6 opacity-70">Passez à la prochaine étape</span>
+              <h2 className="text-5xl md:text-7xl font-display font-medium tracking-tighter leading-[0.9] mb-6">
+                Prêt à passer à <br className="hidden md:block"/>
+                <span className="relative inline-block mt-2">
+                  <span className="relative z-10">l&apos;action ?</span>
+                  <svg className="absolute w-[110%] h-[0.3em] -bottom-[0.05em] -left-[5%] z-0 text-white" viewBox="0 0 200 20" preserveAspectRatio="none">
+                    <path d="M5,15 C45,5 150,15 195,8" fill="none" stroke="currentColor" strokeWidth="12" strokeLinecap="round" />
+                  </svg>
+                </span>
+              </h2>
+              <p className="text-xl font-body leading-relaxed opacity-80">
+                Découvrez gratuitement le potentiel locatif de votre bien au Pays de Gex avec une analyse de rentabilité précise.
+              </p>
+            </div>
+            <div className="shrink-0 flex items-center justify-center relative z-10 w-full md:w-auto">
+              <Link href="/estimation" className="group relative inline-flex items-center justify-center gap-4 bg-black text-white px-10 py-5 text-xl font-bold overflow-hidden w-full md:w-auto border border-black hover:border-black">
+                <div className="absolute inset-0 w-full h-full bg-white scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out z-0"></div>
+                <span className="relative z-10 group-hover:text-black transition-colors duration-500">Estimer mon bien</span>
+                <ArrowRight className="w-6 h-6 relative z-10 group-hover:text-black group-hover:translate-x-2 transition-all duration-500" />
               </Link>
             </div>
           </div>

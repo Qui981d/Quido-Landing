@@ -41,7 +41,7 @@ const posts: BlogPost[] = [
       <h3>Gestion dynamique des prix</h3>
       <p>Nous ajustons vos tarifs quotidiennement en fonction de la saisonnalité, des événements locaux et de la demande. Un appartement au Pays de Gex peut voir son prix nuitée varier du simple au triple lors d'un salon à Palexpo.</p>
       <h3>Ménage hôtelier entre chaque séjour</h3>
-      <p>Nos équipes de nettoyage sont formées aux standards de l'hôtellerie. Chaque rotation comprend le nettoyage complet, le changement du linge de lit et de bain, et la mise en place de produits d'accueil.</p>
+      <p>Nos équipes partenaires de nettoyage sont formées aux standards de l'hôtellerie. Chaque rotation comprend le nettoyage complet, le changement du linge de lit et de bain, et la mise en place de produits d'accueil.</p>
       <h3>Communication voyageurs 7j/7</h3>
       <p>De la première demande de renseignements au check-out, nous gérons l'ensemble des échanges avec vos locataires. Temps de réponse moyen : <strong>moins de 15 minutes</strong>.</p>
 
