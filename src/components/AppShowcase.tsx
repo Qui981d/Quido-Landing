@@ -85,7 +85,7 @@ export default function AppShowcase() {
                     src="/images/app-dashboard.webp"
                     alt="Tableau de bord Quido — Statistiques et performances"
                     fill
-                    className="rounded-b-lg object-cover"
+                    className="rounded-b-lg object-cover object-top"
                   />
                 </div>
               </div>
@@ -94,18 +94,25 @@ export default function AppShowcase() {
               <div className="mx-auto w-[70%] h-1 bg-gray-200 rounded-b-lg" />
             </div>
 
-            {/* Phone Frame — Calendar (Overlapping) */}
-            <div className="absolute -bottom-10 -left-6 md:-left-10 w-[45%] max-w-[200px] z-20">
-              <div className="bg-black rounded-[24px] p-1.5 shadow-2xl">
-                <div className="bg-black rounded-[20px] pt-4 pb-2 px-0.5">
-                  {/* Notch */}
-                  <div className="mx-auto w-20 h-4 bg-black rounded-b-xl relative -top-2 z-10" />
-                  <div className="relative w-full aspect-[9/19]">
+            {/* Tablet Frame — Calendar (Overlapping) */}
+            <div className="relative lg:absolute lg:-bottom-8 lg:-left-8 w-full sm:w-[65%] lg:w-[55%] max-w-[280px] z-20 mt-6 lg:mt-0">
+              <div className="bg-gray-900 rounded-[16px] p-1.5 shadow-2xl">
+                <div className="bg-white rounded-[12px] overflow-hidden">
+                  {/* Tablet top bar */}
+                  <div className="bg-gray-900 px-3 py-1.5 flex items-center justify-between">
+                    <span className="text-[9px] text-gray-400 font-mono">app.quido.fr/calendrier</span>
+                    <div className="flex gap-1">
+                      <div className="w-1.5 h-1.5 rounded-full bg-gray-600" />
+                      <div className="w-1.5 h-1.5 rounded-full bg-gray-600" />
+                      <div className="w-1.5 h-1.5 rounded-full bg-gray-600" />
+                    </div>
+                  </div>
+                  <div className="relative w-full aspect-square">
                     <Image
                       src="/images/app-calendar.webp"
-                      alt="Calendrier Quido — Vue mobile"
+                      alt="Calendrier Quido — Vue des réservations multi-plateformes"
                       fill
-                      className="rounded-[16px] object-cover"
+                      className="object-cover object-top"
                     />
                   </div>
                 </div>
