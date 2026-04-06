@@ -15,17 +15,17 @@ export default function SocialProofTicker() {
         <div className="absolute top-0 bottom-0 left-0 w-32 bg-gradient-to-r from-offwhite to-transparent z-10" />
         <div className="absolute top-0 bottom-0 right-0 w-32 bg-gradient-to-l from-offwhite to-transparent z-10" />
         
-        <div className="flex w-[200%] animate-marquee">
-          <div className="flex w-1/2 justify-around items-center px-4">
+        <div className="flex w-max animate-marquee">
+          <div className="flex shrink-0 gap-12 md:gap-24 px-6 md:px-12 items-center">
             {platforms.map((platform, i) => (
-              <div key={i} className="text-2xl md:text-3xl font-display font-bold text-gray-300 mx-8 whitespace-nowrap opacity-50 hover:opacity-100 hover:text-black transition-all">
+              <div key={i} className="text-2xl md:text-3xl font-display font-bold text-gray-300 whitespace-nowrap opacity-50 hover:opacity-100 hover:text-black transition-all">
                 {platform.name}
               </div>
             ))}
           </div>
-          <div className="flex w-1/2 justify-around items-center px-4">
+          <div className="flex shrink-0 gap-12 md:gap-24 px-6 md:px-12 items-center" aria-hidden="true">
             {platforms.map((platform, i) => (
-              <div key={`dup-${i}`} className="text-2xl md:text-3xl font-display font-bold text-gray-300 mx-8 whitespace-nowrap opacity-50 hover:opacity-100 hover:text-black transition-all">
+              <div key={`dup-${i}`} className="text-2xl md:text-3xl font-display font-bold text-gray-300 whitespace-nowrap opacity-50 hover:opacity-100 hover:text-black transition-all">
                 {platform.name}
               </div>
             ))}
