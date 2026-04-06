@@ -101,36 +101,59 @@ export default function CityLandingPage({
           </div>
         </section>
 
-        {/* Market Highlights */}
-        <section className="py-24 bg-offwhite">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <span className="text-xs font-bold uppercase tracking-[0.3em] text-quido mb-6 block">Le marché local</span>
-              <h2 className="text-4xl lg:text-5xl font-display font-medium tracking-tight">
-                Pourquoi <span className="font-bold">{city}</span> est idéal pour la location saisonnière
-              </h2>
-            </div>
-            <div className="grid md:grid-cols-3 gap-8 lg:gap-12 items-start mt-8">
-              {marketHighlights.map((item, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.15 }}
-                  className={`bg-white rounded-[2.5rem] p-10 lg:p-12 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] transition-all duration-500 group relative overflow-hidden flex flex-col items-center text-center
-                    ${i === 1 ? 'md:mt-16' : ''} 
-                    ${i === 2 ? 'md:mt-32' : ''}
-                  `}
-                >
-                  <div className="absolute top-0 right-0 w-24 h-24 bg-quido-light/30 rounded-bl-[100px] -z-10 group-hover:bg-quido-light/60 transition-colors duration-500" />
-                  <div className="w-20 h-20 bg-offwhite group-hover:bg-quido group-hover:text-black rounded-full flex items-center justify-center text-4xl mb-8 transition-colors duration-500 shadow-sm shrink-0">
-                    {item.icon}
-                  </div>
-                  <h3 className="text-2xl font-bold mb-4 font-display">{item.title}</h3>
-                  <p className="text-gray-500 font-body leading-relaxed">{item.text}</p>
-                </motion.div>
-              ))}
+        {/* Market Highlights - Design Éditorial (Magazine) */}
+        <section className="py-32 bg-offwhite">
+          <div className="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-col lg:flex-row gap-16 lg:gap-24">
+              {/* Colonne de gauche : Titre collant */}
+              <div className="w-full lg:w-1/3 lg:sticky lg:top-40 self-start">
+                <span className="text-xs font-bold uppercase tracking-[0.3em] text-quido mb-6 block">Le marché local</span>
+                <h2 className="text-5xl lg:text-6xl font-display font-medium tracking-tight leading-[0.95] mb-8">
+                  Pourquoi <br/><span className="font-bold relative inline-block mt-2">
+                    <span className="relative z-10">{city}</span>
+                    <svg className="absolute w-[110%] h-[0.3em] -bottom-[0.05em] -left-[5%] z-0 text-quido/40" viewBox="0 0 200 20" preserveAspectRatio="none">
+                      <path d="M5,15 C45,5 150,15 195,8" fill="none" stroke="currentColor" strokeWidth="12" strokeLinecap="round" />
+                    </svg>
+                  </span>
+                  <br/> est idéal.
+                </h2>
+                <p className="text-xl text-gray-500 font-light leading-relaxed mb-8 border-l border-quido pl-6">
+                  Un potentiel locatif unique dicté par son positionnement stratégique, son économie transfrontalière et son cadre de vie exceptionnel.
+                </p>
+              </div>
+
+              {/* Colonne de droite : Liste éditoriale */}
+              <div className="w-full lg:w-2/3 flex flex-col">
+                <div className="border-t-2 border-black" />
+                {marketHighlights.map((item, i) => (
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-50px" }}
+                    transition={{ delay: i * 0.1, duration: 0.7 }}
+                    className="group border-b border-black/10 py-12 md:py-20 hover:border-black transition-colors duration-500 flex flex-col md:flex-row gap-6 md:gap-16 cursor-default"
+                  >
+                    {/* Index & Icone */}
+                    <div className="flex items-center md:items-start md:flex-col gap-6 md:w-1/4 shrink-0">
+                       <span className="text-5xl md:text-7xl text-gray-200 font-display font-bold tracking-tighter group-hover:text-quido transition-colors duration-500">
+                         0{i + 1}
+                       </span>
+                       <span className="text-3xl md:text-4xl text-black md:mt-2 group-hover:scale-125 origin-left transition-transform duration-500">
+                         {item.icon}
+                       </span>
+                    </div>
+
+                    {/* Contenu */}
+                    <div className="md:w-3/4 flex flex-col justify-center">
+                      <h3 className="text-3xl lg:text-4xl font-display font-bold text-black mb-6 leading-tight group-hover:translate-x-2 transition-transform duration-500">{item.title}</h3>
+                      <p className="text-xl text-gray-500 font-body leading-relaxed">
+                        {item.text}
+                      </p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
             </div>
           </div>
         </section>
