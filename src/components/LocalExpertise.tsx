@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 export default function LocalExpertise() {
   return (
     <section id="expertise" className="py-24 bg-white relative">
@@ -27,11 +28,20 @@ export default function LocalExpertise() {
             </div>
             
             <div className="mt-24 lg:mt-0">
-              <p className="text-xl font-medium leading-relaxed font-body">
+              <p className="text-xl font-medium leading-relaxed font-body mb-10">
                 Basés au cœur du Pays de Gex, nous ne gérons pas vos biens depuis un centre d'appel lointain. 
                 <br/><br/>
                 Notre connaissance du tissu économique transfrontalier nous permet de maximiser votre rentabilité avec une précision que les plateformes automatiques ignorent.
               </p>
+              
+              <Link
+                href="/estimation"
+                className="group relative inline-flex items-center justify-center gap-4 bg-black text-white px-8 py-4 text-lg font-bold overflow-hidden w-full sm:w-auto border border-black"
+              >
+                <div className="absolute inset-0 w-full h-full bg-white scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out z-0"></div>
+                <span className="relative z-10 group-hover:text-black transition-colors duration-500">Estimer mon bien</span>
+                <ArrowRight className="w-5 h-5 relative z-10 group-hover:text-black group-hover:translate-x-2 transition-all duration-500" />
+              </Link>
             </div>
           </div>
 
