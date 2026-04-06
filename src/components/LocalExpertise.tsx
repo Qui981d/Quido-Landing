@@ -92,7 +92,7 @@ export default function LocalExpertise() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10 transition-colors duration-500 group-hover:via-black/50" />
               <img 
                 src="/images/local-view.png" 
-                alt="Vue de la région" 
+                alt="Vue panoramique du Pays de Gex entre le Jura et Genève — zone d'intervention Quido Conciergerie" 
                 className="absolute inset-0 w-full h-full object-cover scale-100 group-hover:scale-105 transition-transform duration-1000 origin-center"
               />
               

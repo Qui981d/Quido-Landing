@@ -24,8 +24,26 @@ export default function FAQSection() {
     }
   ];
 
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.q,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.a,
+      }
+    }))
+  };
+
   return (
-    <section id="faq" className="pt-20 pb-24 bg-white">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd).replace(/</g, '\\u003c') }}
+      />
+      <section id="faq" className="pt-20 pb-24 bg-white">
       <div className="max-w-3xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-16">
           <h2 className="text-5xl sm:text-6xl md:text-7xl font-display font-bold tracking-tighter leading-[0.95] mb-6">
@@ -47,6 +65,7 @@ export default function FAQSection() {
         </div>
       </div>
     </section>
+    </>
   );
 }
 

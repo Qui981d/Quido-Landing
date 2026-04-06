@@ -11,6 +11,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
+  const cityPages = [
+    'conciergerie-ferney-voltaire',
+    'conciergerie-saint-genis-pouilly',
+    'conciergerie-divonne-les-bains',
+    'conciergerie-gex',
+    'conciergerie-prevessin-moens',
+  ].map((slug) => ({
+    url: `https://quido.fr/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.8,
+  }));
+
   return [
     {
       url: 'https://quido.fr',
@@ -25,11 +38,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: 'https://quido.fr/rendez-vous',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: 'https://quido.fr/contact',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
       url: 'https://quido.fr/blog',
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.8,
     },
+    ...cityPages,
     ...blogEntries,
   ];
 }

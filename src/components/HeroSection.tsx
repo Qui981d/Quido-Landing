@@ -62,7 +62,7 @@ export default function HeroSection() {
               style={{ borderRadius: '45% 55% 55% 45% / 55% 45% 55% 45%' }}
             >
               <div className="absolute inset-0 bg-black/10 z-10 transition-colors duration-500 hover:bg-transparent"></div>
-              <img src="/images/hero-apartment-gex.png" alt="Appartement premium Pays de Gex" className="w-full h-full object-cover" />
+              <img src="/images/hero-apartment-gex.png" alt="Appartement en location saisonnière géré par conciergerie Quido au Pays de Gex" className="w-full h-full object-cover" />
             </motion.div>
 
             {/* Image 2: Bedroom */}
@@ -74,7 +74,7 @@ export default function HeroSection() {
               style={{ borderRadius: '55% 45% 40% 60% / 60% 50% 50% 40%' }}
             >
               <div className="absolute inset-0 bg-black/5 z-10 transition-colors duration-500 hover:bg-transparent"></div>
-              <img src="/images/hero-bedroom.png" alt="Chambre de luxe" className="w-full h-full object-cover" />
+              <img src="/images/hero-bedroom.png" alt="Chambre premium aménagée pour location Airbnb à Ferney-Voltaire" className="w-full h-full object-cover" />
             </motion.div>
 
             {/* Image 3: Point de Focus (Cuisine) */}
@@ -86,7 +86,7 @@ export default function HeroSection() {
               style={{ borderRadius: '50% 50% 60% 40% / 40% 60% 40% 60%' }}
             >
               <div className="absolute inset-0 bg-black/5 z-10 transition-colors duration-500 hover:bg-transparent"></div>
-              <img src="/images/hero-kitchen.png" alt="Détails de conciergerie" className="w-full h-full object-cover" />
+              <img src="/images/hero-kitchen.png" alt="Cuisine équipée pour location saisonnière haut de gamme Pays de Gex" className="w-full h-full object-cover" />
             </motion.div>
           </div>
 
