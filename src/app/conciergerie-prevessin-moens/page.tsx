@@ -36,6 +36,7 @@ export default function PrevessinPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([jsonLd, breadcrumbJsonLd]).replace(/</g, '\\u003c') }} />
       <CityLandingPage
         city="Prévessin-Moëns"
+        heroImage="/images/hero-mountain.png"
         heroTitle="Conciergerie Airbnb à Prévessin-Moëns."
         heroSubtitle="Commune résidentielle prisée entre le CERN et Genève, Prévessin-Moëns attire des familles et chercheurs internationaux en quête d'un cadre de vie verdoyant à la frontière suisse."
         introText={`

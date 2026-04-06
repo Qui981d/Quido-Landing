@@ -36,6 +36,7 @@ export default function GexPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([jsonLd, breadcrumbJsonLd]).replace(/</g, '\\u003c') }} />
       <CityLandingPage
         city="Gex"
+        heroImage="/images/hero-apartment-gex.png"
         heroTitle="Conciergerie Airbnb à Gex."
         heroSubtitle="Chef-lieu du Pays de Gex, au pied du Jura et à 20 minutes de Genève, Gex combine charme de ville historique et dynamisme transfrontalier pour une location saisonnière rentable."
         introText={`

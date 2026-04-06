@@ -36,6 +36,7 @@ export default function SaintGenisPPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([jsonLd, breadcrumbJsonLd]).replace(/</g, '\\u003c') }} />
       <CityLandingPage
         city="Saint-Genis-Pouilly"
+        heroImage="/images/hero-kitchen.png"
         heroTitle="Conciergerie Airbnb à Saint-Genis-Pouilly."
         heroSubtitle="Aux portes du CERN et à 15 minutes de Genève, Saint-Genis-Pouilly offre un potentiel locatif exceptionnel grâce au flux permanent de chercheurs et ingénieurs internationaux."
         introText={`

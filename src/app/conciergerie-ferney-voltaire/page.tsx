@@ -36,6 +36,7 @@ export default function FerneyVoltairePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([jsonLd, breadcrumbJsonLd]).replace(/</g, '\\u003c') }} />
       <CityLandingPage
         city="Ferney-Voltaire"
+        heroImage="/images/hero-bedroom.png"
         heroTitle="Conciergerie Airbnb à Ferney-Voltaire."
         heroSubtitle="À 10 minutes de Genève et du siège de l'ONU, Ferney-Voltaire est l'une des villes les plus rentables du Pays de Gex pour la location saisonnière. Confiez votre bien à des experts locaux."
         introText={`

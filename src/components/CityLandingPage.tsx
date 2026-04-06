@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight, MapPin, Star, CheckCircle2 } from "lucide-react";
+import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -14,6 +15,7 @@ interface CityPageProps {
   marketHighlights: { icon: string; title: string; text: string }[];
   whyText: string;
   specificAdvantages: string[];
+  heroImage?: string;
   testimonial?: { text: string; author: string; rating: number };
 }
 
@@ -25,6 +27,7 @@ export default function CityLandingPage({
   marketHighlights,
   whyText,
   specificAdvantages,
+  heroImage,
   testimonial,
 }: CityPageProps) {
   return (
@@ -34,27 +37,56 @@ export default function CityLandingPage({
         {/* Hero */}
         <section className="relative pt-32 pb-20 lg:pt-44 lg:pb-28 overflow-hidden bg-offwhite">
           <div className="absolute top-0 right-0 w-1/2 h-[600px] bg-gradient-to-bl from-quido-light/30 to-transparent -z-10" />
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-3xl">
-              <div className="inline-flex items-center gap-3 w-fit mb-8">
-                <MapPin className="w-4 h-4 text-quido" />
-                <span className="text-sm font-semibold text-gray-500 uppercase tracking-[0.2em]">{city}</span>
+          <div className="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+              <div className="w-full lg:w-1/2 max-w-2xl">
+                <div className="inline-flex items-center gap-3 w-fit mb-8">
+                  <MapPin className="w-4 h-4 text-quido" />
+                  <span className="text-sm font-semibold text-gray-500 uppercase tracking-[0.2em]">{city}</span>
+                </div>
+                <h1 className="text-5xl lg:text-7xl font-display font-bold leading-[0.95] tracking-tight text-black mb-8">
+                  {heroTitle}
+                </h1>
+                <p className="text-xl text-gray-500 leading-relaxed font-body mb-10">
+                  {heroSubtitle}
+                </p>
+                <div className="flex flex-col sm:flex-row gap-5 items-center">
+                  <Link href="/estimation" className="group relative inline-flex items-center justify-center gap-4 bg-black text-white px-10 py-5 text-lg font-bold overflow-hidden w-full sm:w-auto border border-black rounded-full hover:shadow-[0_0_40px_rgba(0,0,0,0.2)] transition-shadow">
+                    <div className="absolute inset-0 w-full h-full bg-quido scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out z-0"></div>
+                    <span className="relative z-10">Estimer mon bien</span>
+                    <ArrowRight className="w-5 h-5 relative z-10 group-hover:translate-x-2 transition-all duration-500" />
+                  </Link>
+                  <Link href="/rendez-vous" className="text-lg text-gray-500 hover:text-black border-b border-transparent hover:border-black pb-1 transition-all">
+                    Prendre rendez-vous
+                  </Link>
+                </div>
               </div>
-              <h1 className="text-5xl lg:text-7xl font-display font-bold leading-[0.95] tracking-tight text-black mb-8">
-                {heroTitle}
-              </h1>
-              <p className="text-xl text-gray-500 max-w-2xl leading-relaxed font-body mb-10">
-                {heroSubtitle}
-              </p>
-              <div className="flex flex-col sm:flex-row gap-5 items-center">
-                <Link href="/estimation" className="group relative inline-flex items-center justify-center gap-4 bg-black text-white px-10 py-5 text-lg font-bold overflow-hidden w-full sm:w-auto border border-black">
-                  <div className="absolute inset-0 w-full h-full bg-quido scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out z-0"></div>
-                  <span className="relative z-10">Estimer mon bien</span>
-                  <ArrowRight className="w-5 h-5 relative z-10 group-hover:translate-x-2 transition-all duration-500" />
-                </Link>
-                <Link href="/rendez-vous" className="text-lg text-gray-500 hover:text-black border-b border-transparent hover:border-black pb-1 transition-all">
-                  Prendre rendez-vous
-                </Link>
+              
+              <div className="w-full lg:w-1/2 relative h-[400px] lg:h-[550px] w-full max-w-2xl mx-auto flex items-center justify-center">
+                {/* Organics blobs mimicking the homepage */}
+                <div 
+                  className="absolute z-10 w-[85%] h-[85%] shadow-2xl overflow-hidden filter grayscale-[10%] sepia-[5%]" 
+                  style={{ borderRadius: '50% 50% 60% 40% / 40% 60% 40% 60%' }}
+                >
+                  <Image 
+                    src={heroImage || "/images/local-view.png"} 
+                    alt={city} 
+                    fill 
+                    className="object-cover scale-100 hover:scale-105 transition-transform duration-700" 
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                  />
+                  <div className="absolute inset-0 bg-black/5" />
+                </div>
+                
+                {/* Decorative blob behind */}
+                <div 
+                  className="absolute z-0 w-64 h-64 bg-quido-light/60 mix-blend-multiply right-0 top-0" 
+                  style={{ borderRadius: '40% 60% 60% 40% / 60% 40% 50% 50%' }}
+                />
+                <div 
+                  className="absolute z-0 w-48 h-48 bg-gray-200/50 mix-blend-multiply left-0 bottom-10" 
+                  style={{ borderRadius: '60% 40% 50% 50% / 40% 50% 50% 60%' }}
+                />
               </div>
             </div>
           </div>
@@ -78,18 +110,24 @@ export default function CityLandingPage({
                 Pourquoi <span className="font-bold">{city}</span> est idéal pour la location saisonnière
               </h2>
             </div>
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-3 gap-8 lg:gap-12 items-start mt-8">
               {marketHighlights.map((item, i) => (
                 <motion.div
                   key={i}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ delay: i * 0.1 }}
-                  className="bg-white border border-gray-200 p-10 hover:border-black hover:shadow-lg transition-all duration-500 group"
+                  transition={{ delay: i * 0.15 }}
+                  className={`bg-white rounded-[2.5rem] p-10 lg:p-12 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] transition-all duration-500 group relative overflow-hidden flex flex-col items-center text-center
+                    ${i === 1 ? 'md:mt-16' : ''} 
+                    ${i === 2 ? 'md:mt-32' : ''}
+                  `}
                 >
-                  <span className="text-4xl mb-6 block">{item.icon}</span>
-                  <h3 className="text-xl font-bold mb-4 font-display">{item.title}</h3>
+                  <div className="absolute top-0 right-0 w-24 h-24 bg-quido-light/30 rounded-bl-[100px] -z-10 group-hover:bg-quido-light/60 transition-colors duration-500" />
+                  <div className="w-20 h-20 bg-offwhite group-hover:bg-quido group-hover:text-black rounded-full flex items-center justify-center text-4xl mb-8 transition-colors duration-500 shadow-sm shrink-0">
+                    {item.icon}
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4 font-display">{item.title}</h3>
                   <p className="text-gray-500 font-body leading-relaxed">{item.text}</p>
                 </motion.div>
               ))}
