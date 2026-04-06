@@ -2,12 +2,18 @@ import type { Metadata } from "next";
 import EstimationForm from "./EstimationForm";
 
 export const metadata: Metadata = {
-  title: "Estimation Gratuite de vos Revenus Locatifs au Pays de Gex",
-  description: "Estimez gratuitement le potentiel locatif de votre bien au Pays de Gex. Analyse personnalisée sous 48h par nos experts locaux à Ferney-Voltaire, Saint-Genis-Pouilly, Divonne-les-Bains.",
+  title: "Estimer ses Revenus Airbnb — Simulation Gratuite | Pays de Gex",
+  description: "Estimation Airbnb gratuite : simulez vos revenus locatifs en location courte durée au Pays de Gex. Outil de simulation revenu Airbnb personnalisé, résultat sous 48h. Ferney-Voltaire, Saint-Genis-Pouilly, Gex, Divonne.",
   alternates: { canonical: "https://quido.fr/estimation" },
+  keywords: [
+    'estimer revenus airbnb', 'estimation airbnb', 'simulation airbnb',
+    'simulation revenu airbnb', 'estimer revenu location courte durée',
+    'combien rapporte airbnb', 'revenus location saisonnière pays de gex',
+    'calculer rentabilité airbnb', 'estimation revenus locatifs',
+  ],
   openGraph: {
-    title: "Estimation Gratuite — Conciergerie Quido Pays de Gex",
-    description: "Découvrez combien votre bien peut rapporter en location saisonnière au Pays de Gex. Estimation gratuite et sans engagement.",
+    title: "Estimer ses Revenus Airbnb — Simulation Gratuite au Pays de Gex",
+    description: "Simulez gratuitement combien votre bien peut rapporter en location Airbnb au Pays de Gex. Estimation personnalisée sans engagement.",
     url: "https://quido.fr/estimation",
   },
 };

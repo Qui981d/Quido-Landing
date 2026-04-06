@@ -2,12 +2,16 @@ import type { Metadata } from "next";
 import CityLandingPage from "@/components/CityLandingPage";
 
 export const metadata: Metadata = {
-  title: "Conciergerie Airbnb à Gex — Gestion Locative au Cœur du Pays de Gex",
-  description: "Conciergerie locative à Gex, chef-lieu du Pays de Gex. Gestion Airbnb complète : ménage, voyageurs, optimisation tarifaire. Profitez de la demande transfrontalière.",
+  title: "Conciergerie Gex — Gestion Locative Airbnb au Pays de Gex",
+  description: "Conciergerie à Gex, chef-lieu du Pays de Gex. Gestion locative Airbnb complète : ménage hôtelier, communication voyageurs, optimisation tarifaire. Votre conciergerie locale au cœur de Gex.",
   alternates: { canonical: "https://quido.fr/conciergerie-gex" },
+  keywords: [
+    'conciergerie gex', 'conciergerie airbnb gex', 'gestion locative gex',
+    'airbnb gex', 'location saisonnière gex', 'conciergerie pays de gex',
+  ],
   openGraph: {
-    title: "Conciergerie Airbnb Gex — Quido",
-    description: "Gestion locative premium à Gex, au cœur du Pays de Gex. Maximisez vos revenus Airbnb.",
+    title: "Conciergerie Gex — Gestion Airbnb au Pays de Gex | Quido",
+    description: "Conciergerie locale à Gex. Gestion locative Airbnb complète pour maximiser vos revenus au Pays de Gex.",
     url: "https://quido.fr/conciergerie-gex",
   },
 };

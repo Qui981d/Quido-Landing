@@ -2,12 +2,17 @@ import type { Metadata } from "next";
 import CityLandingPage from "@/components/CityLandingPage";
 
 export const metadata: Metadata = {
-  title: "Conciergerie Airbnb à Saint-Genis-Pouilly — Gestion Locative CERN",
-  description: "Conciergerie locative à Saint-Genis-Pouilly, aux portes du CERN. Gestion Airbnb complète pour propriétaires : ménage hôtelier, optimisation des revenus, service premium.",
+  title: "Gestion Locative à Saint-Genis-Pouilly — Conciergerie Airbnb CERN",
+  description: "Gestion locative à Saint-Genis-Pouilly, aux portes du CERN. Conciergerie Airbnb complète : ménage hôtelier, gestion des voyageurs, optimisation des revenus. Service premium pour propriétaires.",
   alternates: { canonical: "https://quido.fr/conciergerie-saint-genis-pouilly" },
+  keywords: [
+    'gestion locative saint genis pouilly', 'conciergerie saint genis pouilly',
+    'airbnb saint genis pouilly', 'location saisonnière cern',
+    'gestion airbnb saint genis pouilly', 'conciergerie cern',
+  ],
   openGraph: {
-    title: "Conciergerie Airbnb Saint-Genis-Pouilly — Quido",
-    description: "Gestion locative premium à Saint-Genis-Pouilly, près du CERN. Maximisez vos revenus Airbnb.",
+    title: "Gestion Locative Saint-Genis-Pouilly — Conciergerie Quido",
+    description: "Gestion locative et conciergerie Airbnb premium à Saint-Genis-Pouilly, près du CERN. Maximisez vos revenus.",
     url: "https://quido.fr/conciergerie-saint-genis-pouilly",
   },
 };
