@@ -69,7 +69,7 @@ export default function CityLandingPage({
                   style={{ borderRadius: '50% 50% 60% 40% / 40% 60% 40% 60%' }}
                 >
                   <Image 
-                    src={heroImage || "/images/local-view.png"} 
+                    src={heroImage || "/images/local-view.webp"} 
                     alt={city} 
                     fill 
                     className="object-cover scale-100 hover:scale-105 transition-transform duration-700" 

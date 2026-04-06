@@ -173,3 +173,72 @@ h1, h2, h3, h4, h5, h6 {
   transition: width 0.35s cubic-bezier(0.25, 0.4, 0.25, 1);
 }
 .link-reveal:hover::after { width: 100%; }
+
+/* ── Hero Section Animations (replaces framer-motion) ── */
+@keyframes hero-fade-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes hero-img-main {
+  from { opacity: 0; transform: scale(0.8) rotate(-4deg); }
+  to { opacity: 1; transform: scale(1) rotate(0); }
+}
+@keyframes hero-img-bedroom {
+  from { opacity: 0; transform: scale(0.8) translateX(-50px); }
+  to { opacity: 1; transform: scale(1) translateX(0); }
+}
+@keyframes hero-img-kitchen {
+  from { opacity: 0; transform: scale(0.5) translateY(-40px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+.animate-hero-text {
+  animation: hero-fade-up 0.8s ease-out both;
+}
+.animate-hero-img-main {
+  opacity: 0;
+  animation: hero-img-main 1.2s ease-out forwards;
+}
+.animate-hero-img-bedroom {
+  opacity: 0;
+  animation: hero-img-bedroom 1s ease-out 0.3s forwards;
+}
+.animate-hero-img-kitchen {
+  opacity: 0;
+  animation: hero-img-kitchen 1s cubic-bezier(0.25, 0.4, 0.25, 1) 0.6s forwards;
+}
+
+/* ── Navbar Animation (replaces framer-motion) ── */
+@keyframes navbar-slide-down {
+  from { transform: translateY(-100%); }
+  to { transform: translateY(0); }
+}
+.animate-navbar {
+  animation: navbar-slide-down 0.6s cubic-bezier(0.25, 0.4, 0.25, 1) both;
+}
+
+/* ── Bento / Scroll-reveal Animations (replaces framer-motion whileInView) ── */
+@keyframes reveal-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-reveal {
+  opacity: 0;
+  animation: reveal-up 0.5s ease-out forwards;
+}
+.animate-reveal-d1 { animation-delay: 0.1s; }
+.animate-reveal-d2 { animation-delay: 0.2s; }
+.animate-reveal-d3 { animation-delay: 0.3s; }
+.animate-reveal-d4 { animation-delay: 0.4s; }
+.animate-reveal-d5 { animation-delay: 0.5s; }
+.animate-reveal-d6 { animation-delay: 0.6s; }
+.animate-reveal-d7 { animation-delay: 0.7s; }
+
+/* ── Mobile Menu Animation ── */
+@keyframes menu-expand {
+  from { opacity: 0; max-height: 0; }
+  to { opacity: 1; max-height: 500px; }
+}
+.animate-menu-expand {
+  animation: menu-expand 0.3s ease-out forwards;
+  overflow: hidden;
+}

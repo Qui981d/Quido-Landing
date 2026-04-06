@@ -27,7 +27,7 @@ export default function Footer() {
           </div>
           
           <div>
-            <h4 className="font-bold mb-6 text-lg">Services</h4>
+            <h3 className="font-bold mb-6 text-lg">Services</h3>
             <ul className="flex flex-col gap-4 text-gray-400 text-sm">
               <li><Link href="/#services" className="hover:text-quido transition-colors">Conciergerie Locative</Link></li>
               <li><Link href="/menage" className="hover:text-quido transition-colors">Ménage Professionnel</Link></li>
@@ -37,7 +37,7 @@ export default function Footer() {
           </div>
           
           <div>
-            <h4 className="font-bold mb-6 text-lg">Entreprise</h4>
+            <h3 className="font-bold mb-6 text-lg">Entreprise</h3>
             <ul className="flex flex-col gap-4 text-gray-400 text-sm">
               <li><Link href="/contact" className="hover:text-quido transition-colors">Nous contacter</Link></li>
               <li><Link href="/blog" className="hover:text-quido transition-colors">Conseils & Blog</Link></li>
@@ -47,7 +47,7 @@ export default function Footer() {
           </div>
           
           <div>
-            <h4 className="font-bold mb-6 text-lg">Contact</h4>
+            <h3 className="font-bold mb-6 text-lg">Contact</h3>
             <address className="not-italic">
               <ul className="flex flex-col gap-4 text-gray-400 text-sm">
                 <li className="flex items-center gap-3"><Mail size={16} className="text-quido" /> <a href="mailto:hello@quido.fr" className="hover:text-quido transition-colors">hello@quido.fr</a></li>
@@ -60,7 +60,7 @@ export default function Footer() {
 
         {/* Villes desservies — SEO local */}
         <div className="pt-8 border-t border-white/10 mb-8">
-          <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-gray-500 mb-4">Conciergerie locative dans le Pays de Gex</h4>
+          <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-gray-500 mb-4">Conciergerie locative dans le Pays de Gex</h3>
           <div className="flex flex-wrap gap-x-4 gap-y-2 text-sm text-gray-500">
             {cities.map((city, i) => (
               <span key={city}>

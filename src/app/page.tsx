@@ -2,14 +2,15 @@ import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import SocialProofTicker from "@/components/SocialProofTicker";
 import BentoShowcase from "@/components/BentoShowcase";
-import ProcessTimeline from "@/components/ProcessTimeline";
-import LocalExpertise from "@/components/LocalExpertise";
-import TestimonialsSection from "@/components/TestimonialsSection";
-import PricingSection from "@/components/PricingSection";
-import ProofAndBooking from "@/components/ProofAndBooking";
-import AppShowcase from "@/components/AppShowcase";
-import FAQSection from "@/components/FAQSection";
-import Footer from "@/components/Footer";
+import dynamic from "next/dynamic";
+
+const ProcessTimeline = dynamic(() => import("@/components/ProcessTimeline"));
+const LocalExpertise = dynamic(() => import("@/components/LocalExpertise"));
+const AppShowcase = dynamic(() => import("@/components/AppShowcase"));
+const TestimonialsSection = dynamic(() => import("@/components/TestimonialsSection"));
+const ProofAndBooking = dynamic(() => import("@/components/ProofAndBooking"));
+const FAQSection = dynamic(() => import("@/components/FAQSection"));
+const Footer = dynamic(() => import("@/components/Footer"));
 
 export default function Home() {
   return (

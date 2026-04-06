@@ -99,7 +99,7 @@ export default function EstimationForm() {
            className="relative z-10 mt-auto ml-auto shadow-2xl overflow-hidden filter grayscale-[10%] sepia-[5%] shrink-0 h-[25vh] md:h-[30vh] lg:h-[35vh] aspect-[1.1] translate-x-4 md:translate-x-8 lg:translate-x-12 translate-y-4 md:translate-y-8"
            style={{ borderRadius: '45% 55% 55% 45% / 55% 45% 55% 45%' }}
         >
-          <Image fill sizes="(max-width: 1024px) 100vw, 50vw" src="/images/hero-mountain.png" alt="Mountain Chalet Interior" className="object-cover" />
+          <Image fill sizes="(max-width: 1024px) 100vw, 50vw" src="/images/hero-mountain.webp" alt="Mountain Chalet Interior" className="object-cover" />
           <div className="absolute inset-0 bg-black/5"></div>
         </div>
       </div>

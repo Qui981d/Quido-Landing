@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
@@ -19,11 +18,8 @@ export default function Navbar() {
   }, []);
 
   return (
-    <motion.header
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.6, ease: [0.25, 0.4, 0.25, 1] }}
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+    <header
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 animate-navbar ${
         isScrolled ? "bg-white/80 backdrop-blur-md border-b border-gray-200 py-3 shadow-sm" : "bg-transparent py-5"
       }`}
     >
@@ -48,7 +44,11 @@ export default function Navbar() {
           </Link>
 
           {/* Mobile Toggler */}
-          <button className="md:hidden text-black" onClick={() => setIsOpen(!isOpen)}>
+          <button 
+            className="md:hidden text-black" 
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label={isOpen ? "Fermer le menu" : "Ouvrir le menu"}
+          >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
@@ -56,11 +56,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <motion.div 
-          initial={{ opacity: 0, height: 0 }}
-          animate={{ opacity: 1, height: "auto" }}
-          className="md:hidden bg-white border-b border-gray-200 px-4 py-6 flex flex-col gap-4 absolute w-full left-0 top-full shadow-lg"
-        >
+        <div className="md:hidden bg-white border-b border-gray-200 px-4 py-6 flex flex-col gap-4 absolute w-full left-0 top-full shadow-lg animate-menu-expand">
           <Link href="#services" onClick={() => setIsOpen(false)} className="text-lg font-medium text-black">Services</Link>
           <Link href="#process" onClick={() => setIsOpen(false)} className="text-lg font-medium text-black">Comment ça marche</Link>
           <Link href="/blog" onClick={() => setIsOpen(false)} className="text-lg font-medium text-black">Conseils</Link>
@@ -69,8 +65,8 @@ export default function Navbar() {
           <Link href="/rendez-vous" onClick={() => setIsOpen(false)} className="btn-primary mt-4 max-w-max">
             Prendre rendez-vous
           </Link>
-        </motion.div>
+        </div>
       )}
-    </motion.header>
+    </header>
   );
 }

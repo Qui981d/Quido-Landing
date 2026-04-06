@@ -98,7 +98,7 @@ export default function AppShowcase() {
                 </div>
                 <div className="relative w-full aspect-[16/10]">
                   <Image
-                    src="/images/app-dashboard.png"
+                    src="/images/app-dashboard.webp"
                     alt="Tableau de bord Quido — Statistiques et performances"
                     fill
                     className="rounded-b-lg object-cover"
@@ -118,7 +118,7 @@ export default function AppShowcase() {
                   <div className="mx-auto w-20 h-4 bg-black rounded-b-xl relative -top-2 z-10" />
                   <div className="relative w-full aspect-[9/19]">
                     <Image
-                      src="/images/app-calendar.png"
+                      src="/images/app-calendar.webp"
                       alt="Calendrier Quido — Vue mobile"
                       fill
                       className="rounded-[16px] object-cover"

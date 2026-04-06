@@ -9,25 +9,25 @@ export default function ProcessTimeline() {
       day: "Jour 01", 
       title: "L'Audit", 
       desc: "Analyse experte de votre bien sur place et définition d'une stratégie de tarification agressive.",
-      img: "/images/timeline-1.png"
+      img: "/images/timeline-1.webp"
     },
     { 
       day: "Jour 03", 
       title: "La Création", 
       desc: "Direction artistique, shooting professionnel et staging pour faire briller votre intérieur en ligne.",
-      img: "/images/timeline-2.png"
+      img: "/images/timeline-2.webp"
     },
     { 
       day: "Jour 05", 
       title: "Le Déploiement", 
       desc: "Mise en ligne ultra-optimisée, synchronisation des calendriers et lancement algorithmique.",
-      img: "/images/timeline-3.png"
+      img: "/images/timeline-3.webp"
     },
     { 
       day: "Jour 07", 
       title: "Le Résultat", 
       desc: "Les premières réservations tombent. La logistique, les clés et le ménage sont entièrement automatisés.",
-      img: "/images/timeline-4.png"
+      img: "/images/timeline-4.webp"
     }
   ];
 

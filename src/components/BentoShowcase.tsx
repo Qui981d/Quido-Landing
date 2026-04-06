@@ -1,7 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
-
 export default function BentoShowcase() {
   const services = [
     { 
@@ -34,6 +30,16 @@ export default function BentoShowcase() {
     }
   ];
 
+  const delayClasses = [
+    'animate-reveal-d1',
+    'animate-reveal-d2',
+    'animate-reveal-d3',
+    'animate-reveal-d4',
+    'animate-reveal-d5',
+    'animate-reveal-d6',
+    'animate-reveal-d7',
+  ];
+
   return (
     <section id="services" className="py-32 bg-offwhite text-black relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -53,20 +59,16 @@ export default function BentoShowcase() {
               </span>
             </h2>
             <p className="text-lg text-gray-500 font-body">
-              Une offre unique, complète et sans coût caché. Nous prenons le relais sur l'intégralité du cycle locatif pour que vos revenus soient 100% passifs.
+              Une offre unique, complète et sans coût caché. Nous prenons le relais sur l&apos;intégralité du cycle locatif pour que vos revenus soient 100% passifs.
             </p>
           </div>
 
           {/* Colonne Droite (Liste Interactive Premium) */}
           <div className="w-full lg:w-2/3 border-t border-black/10">
             {services.map((service, i) => (
-              <motion.div 
+              <div 
                 key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
-                viewport={{ once: true, margin: "-50px" }}
-                className="group flex flex-col md:flex-row md:items-center justify-between py-10 border-b border-black/10 hover:border-black transition-colors duration-500 cursor-default"
+                className={`group flex flex-col md:flex-row md:items-center justify-between py-10 border-b border-black/10 hover:border-black transition-colors duration-500 cursor-default animate-reveal ${delayClasses[i] || ''}`}
               >
                 <div className="flex items-start gap-8 md:gap-12 w-full">
                   <span className="text-sm font-display font-medium text-gray-400 group-hover:text-black transition-colors shrink-0 mt-1.5 md:mt-0">
@@ -81,7 +83,7 @@ export default function BentoShowcase() {
                     </p>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
 

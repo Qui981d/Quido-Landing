@@ -115,7 +115,7 @@ export default function RootLayout({
               "alternateName": "Quido",
               "url": "https://quido.fr",
               "logo": "https://quido.fr/Logos/rvb_horizontal.png",
-              "image": "https://quido.fr/images/hero-apartment-gex.png",
+              "image": "https://quido.fr/images/hero-apartment-gex.webp",
               "description": "Conciergerie locative premium au Pays de Gex. Gestion complète de votre bien Airbnb : ménage hôtelier, communication voyageurs, optimisation tarifaire. Service 5 étoiles à Ferney-Voltaire, Saint-Genis-Pouilly, Divonne-les-Bains, Gex et Prévessin-Moëns.",
               "telephone": "+33602165671",
               "email": "hello@quido.fr",

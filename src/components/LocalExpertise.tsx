@@ -95,7 +95,7 @@ export default function LocalExpertise() {
               <Image 
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
-                src="/images/local-view.png" 
+                src="/images/local-view.webp" 
                 alt="Vue panoramique du Pays de Gex entre le Jura et Genève — zone d'intervention Quido Conciergerie" 
                 className="object-cover scale-100 group-hover:scale-105 transition-transform duration-1000 origin-center"
               />
