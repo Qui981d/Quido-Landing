@@ -1,7 +1,10 @@
-"use client";
-
-import { motion } from "framer-motion";
-import { Star } from "lucide-react";
+function StarIcon({ className }: { className?: string }) {
+  return (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+    </svg>
+  );
+}
 
 export default function TestimonialsSection() {
   const reviews = [
@@ -9,9 +12,8 @@ export default function TestimonialsSection() {
       text: "J'hésitais à déléguer mon appartement de Ferney-Voltaire car le mobilier a beaucoup de valeur. L'équipe a ciblé une clientèle frontalière très respectueuse, et la rentabilité mensuelle est impressionnante.",
       author: "Marc V.",
       location: "Ferney-Voltaire",
-      shape: "rounded-[3rem] rounded-br-xl", // Bulle douce
+      shape: "rounded-[3rem] rounded-br-xl",
       bg: "bg-offwhite text-black border border-black/5",
-      delay: 0,
       stars: 5,
       mt: "lg:mt-24"
     },
@@ -19,23 +21,23 @@ export default function TestimonialsSection() {
       text: "La vraie différence, c'est la tranquillité d'esprit que leur équipe locale m'apporte. Mon appartement est toujours parfaitement entretenu et je n'ai absolument plus aucune charge mentale.",
       author: "Clara T.",
       location: "Divonne-les-Bains",
-      shape: "rounded-[4rem] rounded-bl-xl", // Bulle très ronde (squircle) focus
-      bg: "bg-[#fae150] text-black shadow-xl", // Jaune signature
-      delay: 0.2,
+      shape: "rounded-[4rem] rounded-bl-xl",
+      bg: "bg-[#fae150] text-black shadow-xl",
       stars: 5,
-      mt: "lg:mt-0" // Plus haute
+      mt: "lg:mt-0"
     },
     {
       text: "Après des mois de gestion locative laborieuse en solo, je leur ai tout confié. Ils ont optimisé les prix selon la saisonnalité locale (Palexpo, frontaliers), et mes revenus ont littéralement fait +40%.",
       author: "Sophie & Julien",
       location: "Gex",
-      shape: "rounded-[3rem] rounded-tl-xl", // Bulle conversationnelle
+      shape: "rounded-[3rem] rounded-tl-xl",
       bg: "bg-black text-white shadow-2xl",
-      delay: 0.4,
       stars: 5,
-      mt: "lg:mt-40" // Plus basse
+      mt: "lg:mt-40"
     }
   ];
+
+  const delayClasses = ['animate-reveal-d1', 'animate-reveal-d2', 'animate-reveal-d3'];
 
   return (
     <section id="testimonials" className="pt-40 pb-24 bg-white relative overflow-hidden">
@@ -57,20 +59,15 @@ export default function TestimonialsSection() {
         {/* Grille Organique (Formes bulles) */}
         <div className="flex flex-col lg:flex-row gap-8 justify-center items-center lg:items-start relative z-20">
           {reviews.map((review, i) => (
-            <motion.div
+            <div
               key={i}
-              initial={{ opacity: 0, y: 50, scale: 0.95 }}
-              whileInView={{ opacity: 1, y: 0, scale: 1 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ delay: review.delay, duration: 0.8, type: "spring", stiffness: 50 }}
-              className={`w-full max-w-lg p-10 lg:p-14 ${review.shape} ${review.bg} ${review.mt} relative flex flex-col justify-between hover:-translate-y-2 transition-transform duration-500 cursor-default min-h-[350px]`}
+              className={`w-full max-w-lg p-10 lg:p-14 ${review.shape} ${review.bg} ${review.mt} relative flex flex-col justify-between hover:-translate-y-2 transition-transform duration-500 cursor-default min-h-[350px] animate-reveal ${delayClasses[i]}`}
             >
               {/* Étoiles */}
               <div className="flex gap-1 mb-8">
                 {[...Array(review.stars)].map((_, starIndex) => (
-                  <Star 
+                  <StarIcon 
                     key={starIndex} 
-                    size={18} 
                     className={`${review.bg.includes('text-white') ? 'fill-quido text-quido' : 'fill-black text-black'}`} 
                   />
                 ))}
@@ -78,7 +75,7 @@ export default function TestimonialsSection() {
 
               {/* Texte */}
               <p className={`text-xl lg:text-2xl font-body leading-relaxed mb-12 ${review.bg.includes('text-white') ? 'text-white/90' : 'text-black/80'}`}>
-                "{review.text}"
+                &quot;{review.text}&quot;
               </p>
 
               {/* Auteur */}
@@ -86,7 +83,7 @@ export default function TestimonialsSection() {
                 <p className="font-bold font-display text-lg">{review.author}</p>
                 <p className="text-sm opacity-70 mt-1 uppercase tracking-widest">{review.location}</p>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 

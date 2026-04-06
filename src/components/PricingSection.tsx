@@ -1,6 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
 import Link from "next/link";
 
 export default function PricingSection() {
@@ -10,6 +7,8 @@ export default function PricingSection() {
     { num: "03.", title: "Gestion 24/7", desc: "Sélection rigoureuse et communication avec les voyageurs du premier message au départ." },
     { num: "04.", title: "Ménage Professionnel", desc: "Coordination de l'entretien complet et de la blanchisserie (frais facturés aux voyageurs)." },
   ];
+
+  const delayClasses = ['animate-reveal-d1', 'animate-reveal-d2', 'animate-reveal-d3', 'animate-reveal-d4'];
 
   return (
     <section id="pricing" className="py-32 bg-white relative">
@@ -53,20 +52,16 @@ export default function PricingSection() {
              
              <ul className="flex flex-col">
                {inclusions.map((item, i) => (
-                 <motion.li 
+                 <li 
                    key={i}
-                   initial={{ opacity: 0, x: 20 }}
-                   whileInView={{ opacity: 1, x: 0 }}
-                   transition={{ delay: i * 0.1, duration: 0.8 }}
-                   viewport={{ once: true }}
-                   className={`flex gap-6 lg:gap-10 border-b border-black/10 py-8 ${i === 0 ? 'pt-0' : ''} ${i === inclusions.length - 1 ? 'border-none pb-0' : ''}`}
+                   className={`flex gap-6 lg:gap-10 border-b border-black/10 py-8 animate-reveal ${delayClasses[i]} ${i === 0 ? 'pt-0' : ''} ${i === inclusions.length - 1 ? 'border-none pb-0' : ''}`}
                  >
                    <span className="text-quido font-display font-medium text-2xl">{item.num}</span>
                    <div>
                      <h4 className="text-xl font-bold mb-2 font-display">{item.title}</h4>
                      <p className="text-gray-500 font-body leading-relaxed">{item.desc}</p>
                    </div>
-                 </motion.li>
+                 </li>
                ))}
              </ul>
 

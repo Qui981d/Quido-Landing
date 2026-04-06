@@ -1,6 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
 import Image from "next/image";
 
 export default function ProcessTimeline() {
@@ -31,6 +28,8 @@ export default function ProcessTimeline() {
     }
   ];
 
+  const delayClasses = ['animate-reveal-d1', 'animate-reveal-d2', 'animate-reveal-d3', 'animate-reveal-d4'];
+
   return (
     <section id="process" className="py-32 bg-white overflow-hidden border-t border-black/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -56,13 +55,9 @@ export default function ProcessTimeline() {
         {/* Disposition Waterfall (Escalier) avec Images */}
         <div className="flex flex-col md:flex-row gap-6 md:gap-4 lg:gap-6 mt-16 md:min-h-[600px]">
           {steps.map((step, i) => (
-            <motion.div 
+            <div 
               key={i}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.15, duration: 0.8, ease: "easeOut" }}
-              viewport={{ once: true, margin: "-50px" }}
-              className={`flex-1 relative bg-offwhite border border-gray-100 hover:bg-black hover:text-white hover:border-black transition-all duration-500 flex flex-col group cursor-default shadow-sm hover:shadow-2xl overflow-hidden
+              className={`flex-1 relative bg-offwhite border border-gray-100 hover:bg-black hover:text-white hover:border-black transition-all duration-500 flex flex-col group cursor-default shadow-sm hover:shadow-2xl overflow-hidden animate-reveal ${delayClasses[i]}
                 ${i === 0 ? 'md:mb-32' : ''} 
                 ${i === 1 ? 'md:mt-10 md:mb-22' : ''} 
                 ${i === 2 ? 'md:mt-20 md:mb-12' : ''} 
@@ -87,7 +82,7 @@ export default function ProcessTimeline() {
                   {step.desc}
                 </p>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 

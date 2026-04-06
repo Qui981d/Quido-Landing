@@ -1,8 +1,22 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Plus, Minus } from "lucide-react";
+
+function PlusIcon({ size }: { size: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M5 12h14" /><path d="M12 5v14" />
+    </svg>
+  );
+}
+
+function MinusIcon({ size }: { size: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M5 12h14" />
+    </svg>
+  );
+}
 
 export default function FAQSection() {
   const faqs = [
@@ -80,21 +94,18 @@ function FAQItem({ question, answer }: { question: string, answer: string }) {
       >
         <span>{question}</span>
         <div className={`p-1 rounded-full transition-colors ${isOpen ? "bg-black text-white" : "bg-gray-100 text-gray-500"}`}>
-          {isOpen ? <Minus size={20} /> : <Plus size={20} />}
+          {isOpen ? <MinusIcon size={20} /> : <PlusIcon size={20} />}
         </div>
       </button>
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            className="px-6 pb-5 text-gray-500"
-          >
+      <div 
+        className={`grid transition-all duration-300 ease-out ${isOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}
+      >
+        <div className="overflow-hidden">
+          <div className="px-6 pb-5 text-gray-500">
             {answer}
-          </motion.div>
-        )}
-      </AnimatePresence>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

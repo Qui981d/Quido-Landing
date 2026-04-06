@@ -1,6 +1,13 @@
-import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+
+function ArrowRightIcon({ className }: { className?: string }) {
+  return (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+      <path d="M5 12h14" /><path d="m12 5 7 7-7 7" />
+    </svg>
+  );
+}
 
 export default function HeroSection() {
   return (
@@ -33,7 +40,7 @@ export default function HeroSection() {
 
             <div className="flex flex-col sm:flex-row gap-5 mt-4 items-center">
               <Link href="/rendez-vous" className="group bg-black text-white px-8 py-4 rounded-full text-lg font-medium flex items-center justify-center gap-3 hover:bg-gray-800 transition-colors duration-300 w-full sm:w-auto">
-                Prendre rendez-vous <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+                Prendre rendez-vous <ArrowRightIcon className="group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link href="#services" className="text-lg text-gray-500 hover:text-black hover:border-b-black border-b border-transparent pb-1 transition-all">
                 Explorer les services

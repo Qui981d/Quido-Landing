@@ -2,15 +2,17 @@ import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import SocialProofTicker from "@/components/SocialProofTicker";
 import BentoShowcase from "@/components/BentoShowcase";
+import ProcessTimeline from "@/components/ProcessTimeline";
+import LocalExpertise from "@/components/LocalExpertise";
+import AppShowcase from "@/components/AppShowcase";
+import TestimonialsSection from "@/components/TestimonialsSection";
+import PricingSection from "@/components/PricingSection";
+import ProofAndBooking from "@/components/ProofAndBooking";
 import dynamic from "next/dynamic";
+import Footer from "@/components/Footer";
 
-const ProcessTimeline = dynamic(() => import("@/components/ProcessTimeline"));
-const LocalExpertise = dynamic(() => import("@/components/LocalExpertise"));
-const AppShowcase = dynamic(() => import("@/components/AppShowcase"));
-const TestimonialsSection = dynamic(() => import("@/components/TestimonialsSection"));
-const ProofAndBooking = dynamic(() => import("@/components/ProofAndBooking"));
+// FAQSection is the only client component left on homepage (uses useState for accordion)
 const FAQSection = dynamic(() => import("@/components/FAQSection"));
-const Footer = dynamic(() => import("@/components/Footer"));
 
 export default function Home() {
   return (
@@ -24,6 +26,7 @@ export default function Home() {
         <LocalExpertise />
         <AppShowcase />
         <TestimonialsSection />
+        <PricingSection />
         <ProofAndBooking />
         <FAQSection />
       </main>

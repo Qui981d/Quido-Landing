@@ -1,8 +1,12 @@
-"use client";
-
-import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+
+function ArrowRightIcon({ className }: { className?: string }) {
+  return (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+      <path d="M5 12h14" /><path d="m12 5 7 7-7 7" />
+    </svg>
+  );
+}
 
 export default function ProofAndBooking() {
   return (
@@ -18,13 +22,7 @@ export default function ProofAndBooking() {
       ></div>
       
       <div className="max-w-5xl mx-auto px-4 sm:px-6 relative z-10">
-        <motion.div 
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 1, ease: [0.25, 0.4, 0.25, 1] }}
-          className="text-center relative"
-        >
+        <div className="text-center relative animate-reveal">
           {/* Label éditorial */}
           <div className="flex items-center justify-center gap-4 w-fit mx-auto mb-8">
             <span className="h-px w-12 bg-black block"></span>
@@ -48,11 +46,11 @@ export default function ProofAndBooking() {
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
             <Link href="/estimation" className="group relative inline-flex items-center justify-center gap-4 bg-black text-white px-10 py-5 rounded-full text-lg font-medium overflow-hidden transition-all hover:bg-quido duration-300 w-full sm:w-auto shadow-xl hover:shadow-[0_20px_40px_rgba(0,205,180,0.25)]">
-              <span className="relative z-10">Demander l'estimation</span>
-              <ArrowRight className="w-5 h-5 relative z-10 group-hover:translate-x-1 transition-transform duration-300" />
+              <span className="relative z-10">Demander l&apos;estimation</span>
+              <ArrowRightIcon className="w-5 h-5 relative z-10 group-hover:translate-x-1 transition-transform duration-300" />
             </Link>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

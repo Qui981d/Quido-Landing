@@ -1,6 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
 import Image from "next/image";
 
 const features = [
@@ -11,6 +8,8 @@ const features = [
 ];
 
 export default function AppShowcase() {
+  const delayClasses = ['animate-reveal-d1', 'animate-reveal-d2', 'animate-reveal-d3', 'animate-reveal-d4'];
+
   return (
     <section className="py-32 bg-offwhite relative overflow-hidden">
       {/* Subtle organic shape */}
@@ -23,12 +22,7 @@ export default function AppShowcase() {
         <div className="grid lg:grid-cols-2 gap-20 items-center">
 
           {/* Left side — Content */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8 }}
-          >
+          <div className="animate-reveal">
             <div className="flex items-center gap-3 mb-6">
               <span className="h-px w-8 bg-quido block" />
               <span className="text-sm font-semibold text-gray-500 uppercase tracking-[0.2em]">Le petit+ Quido</span>
@@ -52,13 +46,9 @@ export default function AppShowcase() {
             {/* Feature checklist */}
             <ul className="flex flex-col gap-4 mb-10">
               {features.map((f, i) => (
-                <motion.li
+                <li
                   key={i}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: i * 0.1 }}
-                  className="flex items-center gap-4 text-lg"
+                  className={`flex items-center gap-4 text-lg animate-reveal ${delayClasses[i]}`}
                 >
                   <div className="w-6 h-6 rounded-full bg-quido/10 flex items-center justify-center shrink-0">
                     <svg className="w-3.5 h-3.5 text-quido" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
@@ -66,7 +56,7 @@ export default function AppShowcase() {
                     </svg>
                   </div>
                   <span className="text-black font-medium">{f.label}</span>
-                </motion.li>
+                </li>
               ))}
             </ul>
 
@@ -74,16 +64,10 @@ export default function AppShowcase() {
               <span className="w-2 h-2 bg-quido rounded-full animate-pulse" />
               Inclus dans votre offre — 0€ supplémentaire
             </div>
-          </motion.div>
+          </div>
 
           {/* Right side — Device Mockups */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 1, delay: 0.3 }}
-            className="relative"
-          >
+          <div className="relative animate-reveal animate-reveal-d3">
             {/* Laptop Frame — Dashboard */}
             <div className="relative z-10">
               <div className="bg-gray-800 rounded-xl p-1 pt-3">
@@ -127,7 +111,7 @@ export default function AppShowcase() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
