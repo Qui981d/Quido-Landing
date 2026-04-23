@@ -9,6 +9,9 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/api/'],
       },
     ],
-    sitemap: 'https://quido.fr/sitemap.xml',
+    sitemap: [
+      'https://www.quido.fr/sitemap.xml',
+      'https://www.quido.fr/menage/sitemap.xml',
+    ],
   };
 }
