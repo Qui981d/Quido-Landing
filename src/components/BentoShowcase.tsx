@@ -48,10 +48,10 @@ export default function BentoShowcase() {
           {/* Colonne Gauche (Sticky) */}
           <div className="w-full lg:w-1/3 lg:sticky lg:top-32">
             <h2 className="text-5xl md:text-6xl font-display font-bold tracking-tighter leading-[1.05] mb-6">
-              Oubliez <br className="hidden lg:block"/>les tracas. <br />
-              <span className="text-gray-400 font-light">On gère <br className="hidden lg:block"/>
+              Vous <br className="hidden lg:block"/>encaissez. <br />
+              <span className="text-gray-400 font-light">On s&apos;occupe <br className="hidden lg:block"/>
                 <span className="relative inline-block text-black font-bold z-10">
-                  <span className="relative z-20">le reste.</span>
+                  <span className="relative z-20">de tout.</span>
                   <svg className="absolute w-[105%] h-[0.3em] -bottom-[0.05em] -left-[2.5%] z-0 text-[#fae150]" viewBox="0 0 200 20" preserveAspectRatio="none">
                     <path d="M5,15 C45,5 150,15 195,8" fill="none" stroke="currentColor" strokeWidth="12" strokeLinecap="round" />
                   </svg>
