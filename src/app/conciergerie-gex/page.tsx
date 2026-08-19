@@ -4,7 +4,7 @@ import CityLandingPage from "@/components/CityLandingPage";
 export const metadata: Metadata = {
   title: "Conciergerie Gex — Gestion Locative Airbnb au Pays de Gex",
   description: "Conciergerie à Gex, chef-lieu du Pays de Gex. Gestion locative Airbnb complète : ménage hôtelier, communication voyageurs, optimisation tarifaire. Votre conciergerie locale au cœur de Gex.",
-  alternates: { canonical: "https://quido.fr/conciergerie-gex" },
+  alternates: { canonical: "https://www.quido.fr/conciergerie-gex" },
   keywords: [
     'conciergerie gex', 'conciergerie airbnb gex', 'gestion locative gex',
     'airbnb gex', 'location saisonnière gex', 'conciergerie pays de gex',
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Conciergerie Gex — Gestion Airbnb au Pays de Gex | Quido",
     description: "Conciergerie locale à Gex. Gestion locative Airbnb complète pour maximiser vos revenus au Pays de Gex.",
-    url: "https://quido.fr/conciergerie-gex",
+    url: "https://www.quido.fr/conciergerie-gex",
   },
 };
 
@@ -20,7 +20,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Service",
   "name": "Conciergerie Airbnb à Gex",
-  "provider": { "@type": "ProfessionalService", "@id": "https://quido.fr/#organization" },
+  "provider": { "@type": "ProfessionalService", "@id": "https://www.quido.fr/#organization" },
   "areaServed": { "@type": "City", "name": "Gex" },
   "description": "Service de conciergerie locative premium à Gex, chef-lieu du Pays de Gex.",
 };
@@ -29,8 +29,8 @@ const breadcrumbJsonLd = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://quido.fr" },
-    { "@type": "ListItem", "position": 2, "name": "Gex", "item": "https://quido.fr/conciergerie-gex" }
+    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.quido.fr" },
+    { "@type": "ListItem", "position": 2, "name": "Gex", "item": "https://www.quido.fr/conciergerie-gex" }
   ]
 };
 

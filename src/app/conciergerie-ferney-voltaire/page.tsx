@@ -4,11 +4,11 @@ import CityLandingPage from "@/components/CityLandingPage";
 export const metadata: Metadata = {
   title: "Conciergerie Airbnb à Ferney-Voltaire — Gestion Locative Premium",
   description: "Conciergerie locative à Ferney-Voltaire, à 10 min de Genève. Gestion Airbnb complète, ménage hôtelier, optimisation tarifaire. Maximisez vos revenus locatifs avec Quido.",
-  alternates: { canonical: "https://quido.fr/conciergerie-ferney-voltaire" },
+  alternates: { canonical: "https://www.quido.fr/conciergerie-ferney-voltaire" },
   openGraph: {
     title: "Conciergerie Airbnb Ferney-Voltaire — Quido",
     description: "Gestion locative premium à Ferney-Voltaire. Ménage hôtelier, communication voyageurs, yield management.",
-    url: "https://quido.fr/conciergerie-ferney-voltaire",
+    url: "https://www.quido.fr/conciergerie-ferney-voltaire",
   },
 };
 
@@ -16,7 +16,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Service",
   "name": "Conciergerie Airbnb à Ferney-Voltaire",
-  "provider": { "@type": "ProfessionalService", "@id": "https://quido.fr/#organization" },
+  "provider": { "@type": "ProfessionalService", "@id": "https://www.quido.fr/#organization" },
   "areaServed": { "@type": "City", "name": "Ferney-Voltaire" },
   "description": "Service de conciergerie locative premium à Ferney-Voltaire. Gestion complète de votre bien Airbnb.",
 };
@@ -25,8 +25,8 @@ const breadcrumbJsonLd = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://quido.fr" },
-    { "@type": "ListItem", "position": 2, "name": "Ferney-Voltaire", "item": "https://quido.fr/conciergerie-ferney-voltaire" }
+    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.quido.fr" },
+    { "@type": "ListItem", "position": 2, "name": "Ferney-Voltaire", "item": "https://www.quido.fr/conciergerie-ferney-voltaire" }
   ]
 };
 

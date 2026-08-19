@@ -40,7 +40,7 @@ const proximaNova = localFont({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://quido.fr'),
+  metadataBase: new URL('https://www.quido.fr'),
   title: {
     default: 'Quido Conciergerie Locative | Gestion Airbnb au Pays de Gex',
     template: '%s | Quido Conciergerie',
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'fr_FR',
-    url: 'https://quido.fr',
+    url: 'https://www.quido.fr',
     siteName: 'Quido Conciergerie',
     title: 'Quido Conciergerie — Gestion Airbnb Premium au Pays de Gex',
     description: 'Conciergerie locative premium au Pays de Gex. Maximisez vos revenus locatifs avec un service hôtelier 5 étoiles à Ferney-Voltaire, Saint-Genis-Pouilly, Divonne-les-Bains.',
@@ -87,7 +87,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: 'https://quido.fr',
+    canonical: 'https://www.quido.fr',
   },
   other: {
     'geo.region': 'FR-01',
@@ -114,12 +114,12 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "ProfessionalService",
-              "@id": "https://quido.fr/#organization",
+              "@id": "https://www.quido.fr/#organization",
               "name": "Quido Conciergerie",
               "alternateName": "Quido",
-              "url": "https://quido.fr",
-              "logo": "https://quido.fr/Logos/rvb_horizontal.png",
-              "image": "https://quido.fr/images/hero-apartment-gex.webp",
+              "url": "https://www.quido.fr",
+              "logo": "https://www.quido.fr/Logos/rvb_horizontal.png",
+              "image": "https://www.quido.fr/images/hero-apartment-gex.webp",
               "description": "Conciergerie locative premium au Pays de Gex. Gestion complète de votre bien Airbnb : ménage hôtelier, communication voyageurs, optimisation tarifaire. Service 5 étoiles à Ferney-Voltaire, Saint-Genis-Pouilly, Divonne-les-Bains, Gex et Prévessin-Moëns.",
               "telephone": "+33602165671",
               "email": "hello@quido.fr",

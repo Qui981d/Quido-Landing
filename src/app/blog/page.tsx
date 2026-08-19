@@ -9,7 +9,7 @@ import { ArrowRight } from "lucide-react";
 export const metadata: Metadata = {
   title: "Blog — Conseils Location Saisonnière & Conciergerie au Pays de Gex",
   description: "Guides, conseils et analyses pour les propriétaires au Pays de Gex : revenus locatifs, fiscalité LMNP, optimisation Airbnb et gestion de conciergerie.",
-  alternates: { canonical: "https://quido.fr/blog" },
+  alternates: { canonical: "https://www.quido.fr/blog" },
 };
 
 export default function BlogPage() {
@@ -22,11 +22,11 @@ export default function BlogPage() {
     "@type": "CollectionPage",
     name: "Blog Quido Conciergerie",
     description: "Articles et guides sur la location saisonnière au Pays de Gex",
-    url: "https://quido.fr/blog",
+    url: "https://www.quido.fr/blog",
     publisher: {
       "@type": "Organization",
       name: "Quido Conciergerie",
-      url: "https://quido.fr",
+      url: "https://www.quido.fr",
     },
   };
 

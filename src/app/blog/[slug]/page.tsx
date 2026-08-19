@@ -20,13 +20,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: post.title,
     description: post.description,
-    alternates: { canonical: `https://quido.fr/blog/${post.slug}` },
+    alternates: { canonical: `https://www.quido.fr/blog/${post.slug}` },
     openGraph: {
       title: post.title,
       description: post.description,
       type: "article",
       publishedTime: post.date,
-      url: `https://quido.fr/blog/${post.slug}`,
+      url: `https://www.quido.fr/blog/${post.slug}`,
       images: [{ url: post.coverImage }],
     },
     twitter: {
@@ -49,11 +49,11 @@ export default async function BlogArticlePage({ params }: { params: Promise<{ sl
     "@type": "Article",
     headline: post.title,
     description: post.description,
-    image: `https://quido.fr${post.coverImage}`,
+    image: `https://www.quido.fr${post.coverImage}`,
     datePublished: post.date,
-    author: { "@type": "Organization", name: "Quido Conciergerie", url: "https://quido.fr" },
-    publisher: { "@type": "Organization", name: "Quido Conciergerie", url: "https://quido.fr" },
-    mainEntityOfPage: `https://quido.fr/blog/${post.slug}`,
+    author: { "@type": "Organization", name: "Quido Conciergerie", url: "https://www.quido.fr" },
+    publisher: { "@type": "Organization", name: "Quido Conciergerie", url: "https://www.quido.fr" },
+    mainEntityOfPage: `https://www.quido.fr/blog/${post.slug}`,
   };
 
   return (

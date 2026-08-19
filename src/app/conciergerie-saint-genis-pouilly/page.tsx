@@ -4,7 +4,7 @@ import CityLandingPage from "@/components/CityLandingPage";
 export const metadata: Metadata = {
   title: "Gestion Locative à Saint-Genis-Pouilly — Conciergerie Airbnb CERN",
   description: "Gestion locative à Saint-Genis-Pouilly, aux portes du CERN. Conciergerie Airbnb complète : ménage hôtelier, gestion des voyageurs, optimisation des revenus. Service premium pour propriétaires.",
-  alternates: { canonical: "https://quido.fr/conciergerie-saint-genis-pouilly" },
+  alternates: { canonical: "https://www.quido.fr/conciergerie-saint-genis-pouilly" },
   keywords: [
     'gestion locative saint genis pouilly', 'conciergerie saint genis pouilly',
     'airbnb saint genis pouilly', 'location saisonnière cern',
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Gestion Locative Saint-Genis-Pouilly — Conciergerie Quido",
     description: "Gestion locative et conciergerie Airbnb premium à Saint-Genis-Pouilly, près du CERN. Maximisez vos revenus.",
-    url: "https://quido.fr/conciergerie-saint-genis-pouilly",
+    url: "https://www.quido.fr/conciergerie-saint-genis-pouilly",
   },
 };
 
@@ -21,7 +21,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Service",
   "name": "Conciergerie Airbnb à Saint-Genis-Pouilly",
-  "provider": { "@type": "ProfessionalService", "@id": "https://quido.fr/#organization" },
+  "provider": { "@type": "ProfessionalService", "@id": "https://www.quido.fr/#organization" },
   "areaServed": { "@type": "City", "name": "Saint-Genis-Pouilly" },
   "description": "Service de conciergerie locative premium à Saint-Genis-Pouilly, aux portes du CERN.",
 };
@@ -30,8 +30,8 @@ const breadcrumbJsonLd = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://quido.fr" },
-    { "@type": "ListItem", "position": 2, "name": "Saint-Genis-Pouilly", "item": "https://quido.fr/conciergerie-saint-genis-pouilly" }
+    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.quido.fr" },
+    { "@type": "ListItem", "position": 2, "name": "Saint-Genis-Pouilly", "item": "https://www.quido.fr/conciergerie-saint-genis-pouilly" }
   ]
 };
 

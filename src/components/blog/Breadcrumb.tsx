@@ -12,7 +12,7 @@ export default function Breadcrumb({ items }: BreadcrumbProps) {
       "@type": "ListItem",
       position: i + 1,
       name: item.label,
-      ...(item.href ? { item: `https://quido.fr${item.href}` } : {}),
+      ...(item.href ? { item: `https://www.quido.fr${item.href}` } : {}),
     })),
   };
 

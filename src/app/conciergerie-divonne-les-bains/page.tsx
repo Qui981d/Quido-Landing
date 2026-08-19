@@ -4,11 +4,11 @@ import CityLandingPage from "@/components/CityLandingPage";
 export const metadata: Metadata = {
   title: "Conciergerie Airbnb à Divonne-les-Bains — Gestion Locative Haut de Gamme",
   description: "Conciergerie locative à Divonne-les-Bains. Gestion Airbnb haut de gamme pour villas et appartements. Clientèle premium, thermes, casino, lac Léman. Maximisez vos revenus.",
-  alternates: { canonical: "https://quido.fr/conciergerie-divonne-les-bains" },
+  alternates: { canonical: "https://www.quido.fr/conciergerie-divonne-les-bains" },
   openGraph: {
     title: "Conciergerie Airbnb Divonne-les-Bains — Quido",
     description: "Gestion locative haut de gamme à Divonne-les-Bains. Thermes, casino, lac Léman : une clientèle premium.",
-    url: "https://quido.fr/conciergerie-divonne-les-bains",
+    url: "https://www.quido.fr/conciergerie-divonne-les-bains",
   },
 };
 
@@ -16,7 +16,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Service",
   "name": "Conciergerie Airbnb à Divonne-les-Bains",
-  "provider": { "@type": "ProfessionalService", "@id": "https://quido.fr/#organization" },
+  "provider": { "@type": "ProfessionalService", "@id": "https://www.quido.fr/#organization" },
   "areaServed": { "@type": "City", "name": "Divonne-les-Bains" },
   "description": "Service de conciergerie locative haut de gamme à Divonne-les-Bains.",
 };
@@ -25,8 +25,8 @@ const breadcrumbJsonLd = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://quido.fr" },
-    { "@type": "ListItem", "position": 2, "name": "Divonne-les-Bains", "item": "https://quido.fr/conciergerie-divonne-les-bains" }
+    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.quido.fr" },
+    { "@type": "ListItem", "position": 2, "name": "Divonne-les-Bains", "item": "https://www.quido.fr/conciergerie-divonne-les-bains" }
   ]
 };
 

@@ -5,7 +5,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const posts = getAllPosts();
 
   const blogEntries = posts.map((post) => ({
-    url: `https://quido.fr/blog/${post.slug}`,
+    url: `https://www.quido.fr/blog/${post.slug}`,
     lastModified: new Date(post.date),
     changeFrequency: 'monthly' as const,
     priority: 0.7,
@@ -18,7 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'conciergerie-gex',
     'conciergerie-prevessin-moens',
   ].map((slug) => ({
-    url: `https://quido.fr/${slug}`,
+    url: `https://www.quido.fr/${slug}`,
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,
     priority: 0.8,
@@ -26,43 +26,43 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     {
-      url: 'https://quido.fr',
+      url: 'https://www.quido.fr',
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 1,
     },
     {
-      url: 'https://quido.fr/estimation',
+      url: 'https://www.quido.fr/estimation',
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.9,
     },
     {
-      url: 'https://quido.fr/rendez-vous',
+      url: 'https://www.quido.fr/rendez-vous',
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
-      url: 'https://quido.fr/contact',
+      url: 'https://www.quido.fr/contact',
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.7,
     },
     {
-      url: 'https://quido.fr/blog',
+      url: 'https://www.quido.fr/blog',
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.8,
     },
     {
-      url: 'https://quido.fr/mentions-legales',
+      url: 'https://www.quido.fr/mentions-legales',
       lastModified: new Date(),
       changeFrequency: 'yearly',
       priority: 0.3,
     },
     {
-      url: 'https://quido.fr/confidentialite',
+      url: 'https://www.quido.fr/confidentialite',
       lastModified: new Date(),
       changeFrequency: 'yearly',
       priority: 0.3,

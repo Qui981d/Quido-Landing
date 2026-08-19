@@ -4,11 +4,11 @@ import CityLandingPage from "@/components/CityLandingPage";
 export const metadata: Metadata = {
   title: "Conciergerie Airbnb à Prévessin-Moëns — Gestion Locative près du CERN",
   description: "Conciergerie locative à Prévessin-Moëns, commune résidentielle prisée du Pays de Gex. Gestion Airbnb pour propriétaires : ménage, voyageurs, revenus optimisés.",
-  alternates: { canonical: "https://quido.fr/conciergerie-prevessin-moens" },
+  alternates: { canonical: "https://www.quido.fr/conciergerie-prevessin-moens" },
   openGraph: {
     title: "Conciergerie Airbnb Prévessin-Moëns — Quido",
     description: "Gestion locative premium à Prévessin-Moëns. Commune résidentielle prisée, proximité CERN.",
-    url: "https://quido.fr/conciergerie-prevessin-moens",
+    url: "https://www.quido.fr/conciergerie-prevessin-moens",
   },
 };
 
@@ -16,7 +16,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Service",
   "name": "Conciergerie Airbnb à Prévessin-Moëns",
-  "provider": { "@type": "ProfessionalService", "@id": "https://quido.fr/#organization" },
+  "provider": { "@type": "ProfessionalService", "@id": "https://www.quido.fr/#organization" },
   "areaServed": { "@type": "City", "name": "Prévessin-Moëns" },
   "description": "Service de conciergerie locative à Prévessin-Moëns, commune résidentielle prisée du Pays de Gex.",
 };
@@ -25,8 +25,8 @@ const breadcrumbJsonLd = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://quido.fr" },
-    { "@type": "ListItem", "position": 2, "name": "Prévessin-Moëns", "item": "https://quido.fr/conciergerie-prevessin-moens" }
+    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.quido.fr" },
+    { "@type": "ListItem", "position": 2, "name": "Prévessin-Moëns", "item": "https://www.quido.fr/conciergerie-prevessin-moens" }
   ]
 };
 
